@@ -1,19 +1,15 @@
-class Evennew1
-    def even_numbers(a,b)
-    (a..b).each do |l|
-        if l.to_i%2==0
-            puts "#{l.to_i}"
-        end
+# a simple new class is made
+class EvenNew1
+  def even_numbers(aaa, bbb)
+    (aaa..bbb).each do |l|
+      puts l.to_i.to_s if l.to_i.even?
     end
+  end
 end
-end
 
-
-eve=Evennew1.new
-puts "Enter a number"
- a = gets
-puts "Enter another number"
- b = gets 
-eve.even_numbers(a,b)
-
-
+eve = EvenNew1.new
+puts 'Enter a number'
+aaa = gets
+puts 'Enter another number'
+bbb = gets
+eve.even_numbers(aaa, bbb)
