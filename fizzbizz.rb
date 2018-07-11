@@ -1,18 +1,27 @@
-def fizzbizz(a,b)
-    (a..b).each do |l|
-        if l.to_i%15==0
-            puts "#{l.chomp} fizzbizz"
-        elsif l.to_i%3==0
-            puts "#{l.chomp} fizz"
-        elsif l.to_i%5==0
-            puts"#{l.chomp} bizz"
-        end
+# hello
+class Aa
+  def fizzbizz(aaa, bbb)
+    (aaa..bbb).each do |l|
+      puts "#{l.chomp} fizzbizz" if (l.to_i % 15).zero?
     end
-end
+    fizzbizz1(aaa, bbb)
+  end
 
-puts "Enter a number"
-a = gets
-puts "Enter a number"
-b = gets
-fizzbizz(a,b)
-                
+  private
+
+  def fizzbizz1(aaa, bbb)
+    (aaa..bbb).each do |l|
+      if (l.to_i % 3).zero?
+        puts "#{l.chomp} fizz"
+      elsif (l.to_i % 5).zero?
+        puts "#{l.chomp} bizz"
+      end
+    end
+  end
+end
+puts 'Enter a number'
+aaa = gets
+puts 'Enter a number'
+bbb = gets
+a = Aa.new
+a.fizzbizz(aaa, bbb)
